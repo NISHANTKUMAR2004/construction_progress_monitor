@@ -1,0 +1,19 @@
+# Ignore dataset
+data/
+*.zip
+*.tar
+
+# Ignore temp files
+temp1.png
+temp2.png
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
