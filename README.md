@@ -53,6 +53,42 @@ The app will be available at `http://localhost:8501`
 4. Set main file path to `app/app.py`
 5. Deploy!
 
+### Docker Deployment (Recommended for Production)
+
+```bash
+# Build the Docker image
+docker build -t aerial-monitor .
+
+# Run the container
+docker run -p 8501:8501 aerial-monitor
+
+# Or use docker-compose
+docker-compose up
+```
+
+### Deployment Checklist
+
+✅ **Code Quality**
+- [x] Error handling for image upload
+- [x] Temporary file cleanup (using `tempfile` module)
+- [x] Model caching for performance
+- [x] Robust model path resolution
+- [x] Input validation
+
+✅ **Configuration**
+- [x] `.streamlit/config.toml` - Properly configured
+- [x] `requirements.txt` - Pinned versions for reproducibility
+- [x] `runtime.txt` - Python 3.10 specified
+- [x] `packages.txt` - System dependencies listed
+
+✅ **Deployment Files**
+- [x] `Dockerfile` - Production-ready container
+- [x] `.dockerignore` - Optimized build context
+- [x] `.gitignore` - Excludes unnecessary files
+
+✅ **Production Ready**
+- Platform: ✅ Streamlit Cloud, ✅ Docker, ✅ Heroku, ✅ HuggingFace Spaces
+
 ## Project Structure
 
 ```
